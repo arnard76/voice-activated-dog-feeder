@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- <title>Voice activated dog feeder</title> -->
+	<link rel="manifest" href="manifest.json" />
+	<!-- add above line back after finishing developing -->
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/style.css">
+
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="favicon.png" />
+
+	<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+	<meta name="theme-color" content="#db4938" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+<script>
+	if ("serviceWorker" in navigator) {
+		window.addEventListener("load", function () {
+			navigator.serviceWorker
+				.register("/serviceWorker.js")
+				.then(res => console.log("service worker registered"))
+				.catch(err => console.log("service worker not registered", err))
+		})
+	}
+</script>
+
+</html>
