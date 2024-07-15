@@ -1,38 +1,8 @@
-# create-svelte
+# voice activator app
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Here are the awesome technologies that made the app work:
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+* Voice command is made using the [Artyom.js](https://sdkcarlos.github.io/sites/artyom.html) Javascript module.
+* [new Bluetooth ability in Javascript](https://developer.chrome.com/docs/capabilities/bluetooth).
+* Website can be installed as an app! check out [progressive web apps (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps).
+* [SvelteKit](https://kit.svelte.dev/) is a javascript framework used to make the all of the layout & functionality.
