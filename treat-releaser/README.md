@@ -1,5 +1,7 @@
 # Treat release device
 
+The purpose of this module is to release a single treat when it recieves a bluetooth message (e.g. from web app) so that dog can eat it.
+
 ## Diagram
 Shows all the different circuit components involved.
 
