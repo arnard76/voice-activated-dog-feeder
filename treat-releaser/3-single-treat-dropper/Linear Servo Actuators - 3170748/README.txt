@@ -1,1 +1,0 @@
-Linear Servo Actuators by potentprintables on Thingiverse: https://www.thingiverse.com/thing:3170748
