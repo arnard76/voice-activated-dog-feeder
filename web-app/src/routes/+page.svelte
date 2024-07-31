@@ -20,21 +20,19 @@
     showNotes = false,
     notesDialog;
 
-  $: if (notesDialog) showNotes ? notesDialog.showModal() : notesDialog.close();
-
-  $: if (browser && !listener) {
+  // Setup listener for trigger phrase
+  // and when heard: send message to release a dog treat
+  if (browser) {
     listener = new Artyom();
 
-    listener.on([triggerPhrase]).then(async (_) => {
+    listener.on([triggerPhrase]).then(async () => {
       showMessage = true;
       listener.say(message);
 
       try {
         await sendReleaseMessage(bluetoothServer);
       } catch (e) {
-        error =
-          "Couldn't send message to treat release device via bluetooth because: " +
-          e;
+        error = `Couldn't send message to treat release device via bluetooth because: ${e}`;
         console.error(e, e.message, e.stackTrace);
       }
 
@@ -42,9 +40,12 @@
     });
   }
 
-  $: if (listener) active ? init() : turnOff();
+  // Reactive statements
+  // https://learn.svelte.dev/tutorial/reactive-statements
+  $: if (notesDialog) showNotes ? notesDialog.showModal() : notesDialog.close();
+  $: active ? startListening() : stopListening();
 
-  async function init() {
+  async function startListening() {
     try {
       await listener.initialize({
         lang: "en-GB", // Great Britain english
@@ -71,9 +72,9 @@
     }
   }
 
-  function turnOff() {
-    listener.fatality();
-    bluetoothServer && bluetoothServer.disconnect();
+  function stopListening() {
+    listener?.fatality();
+    bluetoothServer?.disconnect();
     error = null;
   }
 </script>
