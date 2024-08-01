@@ -13,4 +13,4 @@ Consists of 2 parts:
 
 ## Demo Video
 
-[example.webm](https://github.com/user-attachments/assets/3ff63398-0e05-43c3-be4b-992f99a804af)
+[demo.webm](https://github.com/user-attachments/assets/3ff63398-0e05-43c3-be4b-992f99a804af)
