@@ -2,5 +2,6 @@
 - the pusher is too long so it flies on the end: MAKE IT SHORTER
 - the width and length of the piston head should be slightly smaller than the hole in the treat column
 - the thickness of the piston head should be the same width of the treat column (should be the same distance that the piston moves when it releases a treat)
+- how to connect to treat column?
 
 put this in the commit message when complete!
