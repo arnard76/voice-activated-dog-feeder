@@ -57,12 +57,14 @@
       });
     } catch (e) {
       error = "Voice listener couldn't be initialized: " + e;
+      return;
     }
 
     try {
       releaseDevice = await getReleaseDevice();
     } catch (e) {
       error = "Couldn't find treat release device via bluetooth";
+      return;
     }
 
     try {
